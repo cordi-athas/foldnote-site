@@ -1,0 +1,15 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { legalLastUpdated, privacyHighlights, privacySections } from '../data/legal';
+---
+
+<LegalPage
+	title="Privacy Policy | Foldnote"
+	description="Read the Foldnote Privacy Policy to understand what information Foldnote collects, how it is used, how it is stored, and how to contact the team about privacy requests."
+	path="/privacy"
+	eyebrow="Privacy Policy"
+	summary="This page explains what information Foldnote collects, how it is used to operate notes and shared spaces, what controls are available to users, and how to contact the team for privacy-related requests."
+	highlights={privacyHighlights}
+	sections={privacySections}
+	lastUpdated={legalLastUpdated}
+/>

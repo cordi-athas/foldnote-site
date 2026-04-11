@@ -1,0 +1,37 @@
+# Foldnote
+
+Foldnote is a visual note-taking app for iPhone built for both personal organization and shared spaces.
+
+## Summary
+
+Foldnote combines structured blocks, folders, stickers, reminders, and group sharing in a warm, visual interface. It is designed for everyday planning, lightweight collaboration, and recurring life organization tasks such as routines, travel plans, checklists, recipes, study notes, and shared household coordination.
+
+## Product facts
+
+- Name: Foldnote
+- Company: Ruzname Labs
+- Website: https://foldnote.app/
+- Contact: info@foldnote.app
+- Platform: iPhone
+- Product type: Note-taking app
+- Core interface: Blocks, folders, stickers, paper styles, shared spaces
+
+## Key capabilities
+
+- Create notes with text, checklists, tables, links, images, and specialized blocks
+- Organize information with folders, paper styles, colors, and stickers
+- Share notes and folders in group spaces
+- Use reminders and search to stay on top of plans and details
+- Support workflows like travel planning, routines, fitness, meal prep, study, and budgeting
+
+## Pricing summary
+
+- Free plan available
+- Yearly plan: USD 19.99
+- Yearly plan includes a 2-week free trial
+
+## Canonical URLs
+
+- Home: https://foldnote.app/
+- Privacy Policy: https://foldnote.app/privacy
+- Terms of Service: https://foldnote.app/terms

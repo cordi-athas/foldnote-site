@@ -1,0 +1,368 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+	{
+		title: 'Structured notes, not blank pages',
+		copy: 'Mix text, checklists, tables, images, reminders, and specialized blocks in one flowing note.'
+	},
+	{
+		title: 'Built for shared life',
+		copy: 'Create group spaces for family plans, travel lists, home routines, or lightweight team coordination.'
+	},
+	{
+		title: 'Visual by default',
+		copy: 'Folders, paper styles, color, and stickers make notes easier to scan and much more personal.'
+	}
+];
+
+const scenarios = [
+	'Weekly planning, errands, and shared household lists',
+	'Travel notes with flights, packing lists, and bookmarks',
+	'Recipes, meal prep, habit tracking, and fitness routines',
+	'Study notes, flashcards, schedules, and assignment tracking'
+];
+
+const highlights = [
+	'30+ block types',
+	'Shared spaces and groups',
+	'Folders, stickers, and themes',
+	'Search and reminders'
+];
+
+const faqItems = [
+	{
+		question: 'What is Foldnote?',
+		answer:
+			'Foldnote is a visual note-taking app for iPhone that helps people create, organize, and share notes with blocks, folders, stickers, and shared spaces.'
+	},
+	{
+		question: 'Does Foldnote support shared notes?',
+		answer:
+			'Yes. Foldnote supports groups and shared folders, so notes can be used for family planning, lightweight collaboration, travel planning, and shared routines.'
+	},
+	{
+		question: 'How does pricing work?',
+		answer:
+			'Foldnote has a free plan for getting started and a yearly paid plan at $19.99 with a 2-week free trial for unlimited notes, larger groups, and more customization.'
+	}
+];
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'WebSite',
+			'@id': 'https://foldnote.app/#website',
+			url: 'https://foldnote.app/',
+			name: 'Foldnote',
+			alternateName: 'Foldnote App',
+			description:
+				'Visual note-taking for personal planning and shared spaces, with blocks, stickers, folders, and collaboration.',
+			inLanguage: 'en-US'
+		},
+		{
+			'@type': 'Organization',
+			'@id': 'https://foldnote.app/#organization',
+			name: 'Ruzname Labs',
+			url: 'https://foldnote.app/',
+			logo: {
+				'@type': 'ImageObject',
+				url: 'https://foldnote.app/logo-mark.svg'
+			}
+		},
+		{
+			'@type': 'WebPage',
+			'@id': 'https://foldnote.app/#webpage',
+			url: 'https://foldnote.app/',
+			name: 'Foldnote | Notes That Feel More Alive',
+			isPartOf: {
+				'@id': 'https://foldnote.app/#website'
+			},
+			publisher: {
+				'@id': 'https://foldnote.app/#organization'
+			},
+			about: {
+				'@id': 'https://foldnote.app/#app'
+			},
+			description:
+				'Foldnote is a visual note-taking app for iPhone with blocks, folders, stickers, shared spaces, and flexible organization.',
+			primaryImageOfPage: {
+				'@type': 'ImageObject',
+				url: 'https://foldnote.app/og-foldnote.png'
+			},
+			inLanguage: 'en-US'
+		},
+		{
+			'@type': 'SoftwareApplication',
+			'@id': 'https://foldnote.app/#app',
+			name: 'Foldnote',
+			url: 'https://foldnote.app/',
+			operatingSystem: 'iOS',
+			applicationCategory: 'ProductivityApplication',
+			description:
+				'Foldnote is a visual note-taking app for iPhone built for personal planning and shared spaces, with flexible blocks, folders, stickers, reminders, and collaboration.',
+			offers: [
+				{
+					'@type': 'Offer',
+					name: 'Foldnote Free',
+					price: '0',
+					priceCurrency: 'USD'
+				},
+				{
+					'@type': 'Offer',
+					name: 'Foldnote Yearly',
+					price: '19.99',
+					priceCurrency: 'USD'
+				}
+			],
+			brand: {
+				'@id': 'https://foldnote.app/#organization'
+			},
+			featureList: [
+				'30+ block types',
+				'Shared notes and groups',
+				'Folders, stickers, and paper styles',
+				'Search and reminders'
+			]
+		}
+	]
+};
+---
+
+<Layout
+	title="Foldnote | Notes That Feel More Alive"
+	description="Foldnote is a visual note-taking app for personal planning and shared spaces, with blocks, stickers, folders, and collaboration."
+	path="/"
+	image="/og-foldnote.png"
+	imageAlt="Foldnote homepage preview showing warm paper design and note-taking features"
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+	</Fragment>
+	<div class="site-shell">
+		<header class="topbar">
+			<a class="brand" href="#top" aria-label="Foldnote home">
+				<span class="brand-mark">F</span>
+				<span class="brand-text">
+					<strong>Foldnote</strong>
+					<small>foldnote.app</small>
+				</span>
+			</a>
+
+			<nav class="topnav" aria-label="Primary">
+				<a href="#features">Features</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#contact">Contact</a>
+			</nav>
+
+			<a class="button button-ghost" href="mailto:info@foldnote.app">Get updates</a>
+		</header>
+
+		<main id="top">
+			<section class="hero">
+				<div class="hero-copy">
+					<p class="eyebrow">Warm, flexible note-taking for real life</p>
+					<h1>Notes that feel more alive than a plain page.</h1>
+					<p class="hero-text">
+						Foldnote is a visual note-taking app for iPhone that turns writing, planning, and sharing into
+						a calm workspace. Create notes with blocks, stickers, folders, and shared spaces that stay
+						clear even when life gets messy.
+					</p>
+
+					<div class="hero-actions">
+						<a class="button button-primary" href="#pricing">See pricing</a>
+						<a class="button button-secondary" href="#features">Explore features</a>
+					</div>
+
+					<ul class="hero-pills" aria-label="Product highlights">
+						{highlights.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+
+				<div class="hero-visual" aria-hidden="true">
+					<div class="phone-stage">
+						<div class="phone-frame">
+							<div class="phone-notch"></div>
+							<div class="phone-screen">
+								<div class="note-stack note-stack-main">
+									<div class="tiny-label">Shared trip plan</div>
+									<h2>Lisbon weekend</h2>
+									<ul>
+										<li>Book tram card</li>
+										<li>Save restaurant list</li>
+										<li>Pack light layers</li>
+									</ul>
+									<div class="screen-tags">
+										<span>Flights</span>
+										<span>Checklist</span>
+										<span>Budget</span>
+									</div>
+								</div>
+
+								<div class="floating-card floating-card-left">
+									<span class="mini-chip">Routine</span>
+									<strong>7 blocks</strong>
+									<small>Habits, water, meals</small>
+								</div>
+
+								<div class="floating-card floating-card-right">
+									<span class="mini-chip mini-chip-accent">2-week trial</span>
+									<strong>Yearly</strong>
+									<small>Start free, decide later</small>
+								</div>
+							</div>
+						</div>
+						<div class="stage-shadow"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="proof-strip">
+				<p>Designed for personal notes, shared folders, and collaborative spaces that still feel calm.</p>
+			</section>
+
+			<section class="overview-grid" aria-labelledby="overview-title">
+				<article class="overview-card overview-card-primary">
+					<p class="eyebrow">At a glance</p>
+					<h2 id="overview-title">What Foldnote is, in one clear answer.</h2>
+					<p>
+						Foldnote is a visual note-taking app for iPhone. It combines structured blocks, folders,
+						stickers, reminders, and shared spaces so people can organize ideas, plans, and ongoing life
+						admin in one place.
+					</p>
+				</article>
+
+				<article class="overview-card overview-card-facts">
+					<dl class="fact-list">
+						<div>
+							<dt>Platform</dt>
+							<dd>iPhone</dd>
+						</div>
+						<div>
+							<dt>Best for</dt>
+							<dd>Personal planning and shared notes</dd>
+						</div>
+						<div>
+							<dt>Core format</dt>
+							<dd>Blocks, folders, stickers, shared spaces</dd>
+						</div>
+						<div>
+							<dt>Pricing</dt>
+							<dd>Free plan plus yearly option with 2-week trial</dd>
+						</div>
+					</dl>
+				</article>
+			</section>
+
+			<section class="section-grid" id="features">
+				<div class="section-heading">
+					<p class="eyebrow">Why Foldnote works</p>
+					<h2>Flexible enough for planning, light enough for everyday capture.</h2>
+				</div>
+
+				<div class="feature-grid">
+					{features.map((feature, index) => (
+						<article class={`feature-card feature-tone-${index + 1}`}>
+							<div class="feature-number">0{index + 1}</div>
+							<h3>{feature.title}</h3>
+							<p>{feature.copy}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="split-panel">
+				<div class="panel panel-paper">
+					<p class="eyebrow">Use cases</p>
+					<h2>One app for plans, lists, routines, and shared context.</h2>
+					<ul class="scenario-list">
+						{scenarios.map((scenario) => <li>{scenario}</li>)}
+					</ul>
+				</div>
+
+				<div class="panel panel-accent">
+					<p class="eyebrow">Experience</p>
+					<h2>More personality, less clutter.</h2>
+					<p>
+						The visual language stays warm and tactile instead of sterile. Paper styles, color, stickers,
+						and gentle structure make notes feel approachable without sacrificing clarity.
+					</p>
+				</div>
+			</section>
+
+			<section class="pricing" id="pricing">
+				<div class="section-heading">
+					<p class="eyebrow">Simple pricing</p>
+					<h2>Start free, expand when you need more room.</h2>
+				</div>
+
+				<div class="pricing-grid">
+					<article class="price-card">
+						<p class="price-label">Free</p>
+						<h3>Enough space to try the product properly.</h3>
+						<p class="price-copy">Create notes, explore blocks, and share with a small group before committing.</p>
+						<ul>
+							<li>Up to 5 personal notes</li>
+							<li>Up to 10 blocks per note</li>
+							<li>1 group with up to 3 people</li>
+						</ul>
+					</article>
+
+					<article class="price-card price-card-featured">
+						<div class="price-ribbon">Start free</div>
+						<p class="price-label">Yearly</p>
+						<h3>$19.99 per year</h3>
+						<p class="price-copy">Includes a 2-week free trial, unlimited notes, bigger groups, and more visual customization.</p>
+						<ul>
+							<li>Unlimited personal notes</li>
+							<li>Custom stickers and more styles</li>
+							<li>Groups up to 50 people</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+
+			<section class="faq-section" aria-labelledby="faq-title">
+				<div class="section-heading">
+					<p class="eyebrow">Common questions</p>
+					<h2 id="faq-title">Clear answers for search engines, AI tools, and humans.</h2>
+				</div>
+
+				<div class="faq-grid">
+					{faqItems.map((item) => (
+						<article class="faq-card">
+							<h3>{item.question}</h3>
+							<p>{item.answer}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="cta-band" id="contact">
+				<div>
+					<p class="eyebrow">Foldnote for iPhone</p>
+					<h2>Want launch updates or early access details?</h2>
+				</div>
+
+				<div class="cta-actions">
+					<a class="button button-primary" href="mailto:info@foldnote.app?subject=Foldnote%20updates">Email Foldnote</a>
+					<a class="button button-secondary" href="/privacy">Privacy</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div>
+				<strong>Foldnote</strong>
+				<p>Visual notes for planning, sharing, and everyday clarity.</p>
+			</div>
+
+			<div class="footer-links">
+				<a href="/privacy">Privacy</a>
+				<a href="/terms">Terms</a>
+				<a href="mailto:info@foldnote.app">info@foldnote.app</a>
+			</div>
+		</footer>
+	</div>
+</Layout>

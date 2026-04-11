@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Foldnote open graph preview">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1060" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBF5EA" />
+      <stop offset="1" stop-color="#F3E5D3" />
+    </linearGradient>
+    <linearGradient id="accent" x1="170" y1="110" x2="860" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F0B45E" />
+      <stop offset="1" stop-color="#CA684A" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)" />
+  <circle cx="1020" cy="120" r="130" fill="#EADCF9" opacity="0.8" />
+  <circle cx="126" cy="540" r="160" fill="#F6DFC7" opacity="0.92" />
+  <rect x="82" y="66" width="104" height="104" rx="30" fill="url(#accent)" />
+  <path d="M116 96h55v14h-38v22h31v14h-31v25h-17V96z" fill="#FFF8F0" />
+  <text x="82" y="252" fill="#221913" font-size="88" font-family="Palatino Linotype, Iowan Old Style, serif" font-weight="700">
+    Foldnote
+  </text>
+  <text x="82" y="334" fill="#5A4637" font-size="34" font-family="Avenir Next, Segoe UI, sans-serif">
+    Visual note-taking for personal planning and shared spaces
+  </text>
+  <g transform="translate(736 94)">
+    <rect width="340" height="442" rx="34" fill="#2D241F" />
+    <rect x="18" y="18" width="304" height="406" rx="26" fill="#FBF2E6" />
+    <rect x="114" y="32" width="112" height="20" rx="10" fill="#201915" />
+    <rect x="44" y="90" width="216" height="178" rx="26" fill="#FFF8F0" stroke="#D9C7B5" />
+    <text x="62" y="126" fill="#7A6351" font-size="16" font-family="Avenir Next, Segoe UI, sans-serif" letter-spacing="2">
+      SHARED NOTE
+    </text>
+    <text x="62" y="168" fill="#221913" font-size="34" font-family="Palatino Linotype, Iowan Old Style, serif" font-weight="700">
+      Lisbon weekend
+    </text>
+    <text x="62" y="208" fill="#5A4637" font-size="20" font-family="Avenir Next, Segoe UI, sans-serif">
+      Flights, checklist, budget
+    </text>
+    <rect x="42" y="308" width="124" height="72" rx="22" fill="#FFF8F0" stroke="#D9C7B5" />
+    <text x="60" y="336" fill="#CA684A" font-size="13" font-family="Avenir Next, Segoe UI, sans-serif" font-weight="700" letter-spacing="1.5">
+      YEARLY
+    </text>
+    <text x="60" y="365" fill="#221913" font-size="25" font-family="Avenir Next, Segoe UI, sans-serif" font-weight="700">
+      Start free
+    </text>
+    <rect x="184" y="324" width="112" height="40" rx="20" fill="#F9E4D8" />
+    <text x="207" y="350" fill="#CA684A" font-size="17" font-family="Avenir Next, Segoe UI, sans-serif" font-weight="700">
+      2-week trial
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+# Foldnote
+
+> Official summary for Foldnote, a visual note-taking app for iPhone built for personal planning and shared spaces.
+
+Foldnote helps people create, organize, and share notes using structured blocks, folders, stickers, reminders, and shared spaces.
+
+## Key facts
+
+- Product: Foldnote
+- Company: Ruzname Labs
+- Website: https://foldnote.app/
+- Contact: mailto:info@foldnote.app
+- Platform: iPhone
+- Category: Visual note-taking app
+
+## Core topics
+
+- Visual note-taking
+- Shared notes and groups
+- Blocks, folders, stickers, and paper styles
+- Personal planning, routines, travel, study, and household coordination
+
+## Canonical pages
+
+- Home: https://foldnote.app/
+- Privacy Policy: https://foldnote.app/privacy
+- Terms of Service: https://foldnote.app/terms

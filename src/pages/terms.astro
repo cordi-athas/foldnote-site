@@ -1,0 +1,15 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { legalLastUpdated, termsHighlights, termsSections } from '../data/legal';
+---
+
+<LegalPage
+	title="Terms of Service | Foldnote"
+	description="Read the Foldnote Terms of Service covering acceptable use, content ownership, collaboration rules, service availability, and contact details."
+	path="/terms"
+	eyebrow="Terms of Service"
+	summary="This page describes the rules for using Foldnote, including account responsibilities, content ownership, acceptable use, collaboration behavior, service limitations, and dispute handling."
+	highlights={termsHighlights}
+	sections={termsSections}
+	lastUpdated={legalLastUpdated}
+/>

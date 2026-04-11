@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Highlight {
+	title: string;
+	description: string;
+}
+
+interface Section {
+	title: string;
+	html: string;
+}
+
+interface Props {
+	title: string;
+	description: string;
+	path: string;
+	eyebrow: string;
+	summary: string;
+	highlights: Highlight[];
+	sections: Section[];
+	lastUpdated: string;
+}
+
+const { title, description, path, eyebrow, summary, highlights, sections, lastUpdated } = Astro.props;
+const site = 'https://foldnote.app';
+const canonical = new URL(path, site).toString();
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	'@id': `${canonical}#webpage`,
+	url: canonical,
+	name: title,
+	description,
+	isPartOf: {
+		'@type': 'WebSite',
+		'@id': 'https://foldnote.app/#website',
+		url: 'https://foldnote.app/',
+		name: 'Foldnote'
+	},
+	publisher: {
+		'@type': 'Organization',
+		'@id': 'https://foldnote.app/#organization',
+		name: 'Ruzname Labs',
+		url: 'https://foldnote.app/'
+	},
+	inLanguage: 'en-US'
+};
+---
+
+<Layout title={title} description={description} path={path} image="/og-foldnote.png">
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+	</Fragment>
+
+	<div class="site-shell legal-shell">
+		<header class="topbar">
+			<a class="brand" href="/" aria-label="Foldnote home">
+				<span class="brand-mark">F</span>
+				<span class="brand-text">
+					<strong>Foldnote</strong>
+					<small>foldnote.app</small>
+				</span>
+			</a>
+
+			<nav class="topnav topbar-linkset" aria-label="Legal pages">
+				<a href="/">Home</a>
+				<a href="/privacy">Privacy</a>
+				<a href="/terms">Terms</a>
+			</nav>
+
+			<a class="button button-ghost" href="mailto:info@foldnote.app">Contact</a>
+		</header>
+
+		<main class="legal-main">
+			<section class="legal-hero">
+				<p class="eyebrow">{eyebrow}</p>
+				<h1>{title}</h1>
+				<p class="legal-summary-text">{summary}</p>
+				<p class="legal-updated">Last updated {lastUpdated}</p>
+			</section>
+
+			<section class="legal-summary-grid" aria-label="Key legal points">
+				{highlights.map((highlight) => (
+					<article class="legal-card">
+						<h2>{highlight.title}</h2>
+						<p>{highlight.description}</p>
+					</article>
+				))}
+			</section>
+
+			<section class="legal-grid" aria-label="Legal policy sections">
+				{sections.map((section, index) => (
+					<article class={`legal-section ${index < 2 ? 'legal-section-accent' : ''}`}>
+						<div class="legal-section-header">
+							<span class="legal-section-number">{String(index + 1).padStart(2, '0')}</span>
+							<h2>{section.title}</h2>
+						</div>
+						<div class="legal-richtext" set:html={section.html} />
+					</article>
+				))}
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div>
+				<strong>Foldnote</strong>
+				<p>Visual notes for planning, sharing, and everyday clarity.</p>
+			</div>
+
+			<div class="footer-links">
+				<a href="/">Home</a>
+				<a href="/privacy">Privacy</a>
+				<a href="/terms">Terms</a>
+				<a href="mailto:info@foldnote.app">info@foldnote.app</a>
+			</div>
+		</footer>
+	</div>
+</Layout>
