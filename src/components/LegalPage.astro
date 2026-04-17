@@ -42,7 +42,11 @@ const structuredData = {
 		'@type': 'Organization',
 		'@id': 'https://foldnote.app/#organization',
 		name: 'Ruzname Labs',
-		url: 'https://foldnote.app/'
+		url: 'https://foldnote.app/',
+		logo: {
+			'@type': 'ImageObject',
+			url: 'https://foldnote.app/logo.png'
+		}
 	},
 	inLanguage: 'en-US'
 };
@@ -53,13 +57,13 @@ const structuredData = {
 		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
 	</Fragment>
 
-	<div class="site-shell legal-shell">
-		<header class="topbar">
-			<a class="brand" href="/" aria-label="Foldnote home">
-				<span class="brand-mark">F</span>
-				<span class="brand-text">
-					<strong>Foldnote</strong>
-					<small>foldnote.app</small>
+		<div class="site-shell legal-shell">
+			<header class="topbar">
+				<a class="brand" href="/" aria-label="Foldnote home">
+					<img class="brand-mark" src="/logo.png" alt="Foldnote logo" width="44" height="44" />
+					<span class="brand-text">
+						<strong>Foldnote</strong>
+						<small>foldnote.app</small>
 				</span>
 			</a>
 

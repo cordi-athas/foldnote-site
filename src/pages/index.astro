@@ -61,16 +61,16 @@ const structuredData = {
 				'Visual note-taking for personal planning and shared spaces, with blocks, stickers, folders, and collaboration.',
 			inLanguage: 'en-US'
 		},
-		{
-			'@type': 'Organization',
-			'@id': 'https://foldnote.app/#organization',
-			name: 'Ruzname Labs',
-			url: 'https://foldnote.app/',
-			logo: {
-				'@type': 'ImageObject',
-				url: 'https://foldnote.app/logo-mark.svg'
-			}
-		},
+			{
+				'@type': 'Organization',
+				'@id': 'https://foldnote.app/#organization',
+				name: 'Ruzname Labs',
+				url: 'https://foldnote.app/',
+				logo: {
+					'@type': 'ImageObject',
+					url: 'https://foldnote.app/logo.png'
+				}
+			},
 		{
 			'@type': 'WebPage',
 			'@id': 'https://foldnote.app/#webpage',
@@ -140,13 +140,13 @@ const structuredData = {
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
 	</Fragment>
-	<div class="site-shell">
-		<header class="topbar">
-			<a class="brand" href="#top" aria-label="Foldnote home">
-				<span class="brand-mark">F</span>
-				<span class="brand-text">
-					<strong>Foldnote</strong>
-					<small>foldnote.app</small>
+		<div class="site-shell">
+			<header class="topbar">
+				<a class="brand" href="#top" aria-label="Foldnote home">
+					<img class="brand-mark" src="/logo.png" alt="Foldnote logo" width="44" height="44" />
+					<span class="brand-text">
+						<strong>Foldnote</strong>
+						<small>foldnote.app</small>
 				</span>
 			</a>
 
@@ -180,42 +180,36 @@ const structuredData = {
 					</ul>
 				</div>
 
-				<div class="hero-visual" aria-hidden="true">
-					<div class="phone-stage">
-						<div class="phone-frame">
-							<div class="phone-notch"></div>
-							<div class="phone-screen">
-								<div class="note-stack note-stack-main">
-									<div class="tiny-label">Shared trip plan</div>
-									<h2>Lisbon weekend</h2>
-									<ul>
-										<li>Book tram card</li>
-										<li>Save restaurant list</li>
-										<li>Pack light layers</li>
-									</ul>
-									<div class="screen-tags">
-										<span>Flights</span>
-										<span>Checklist</span>
-										<span>Budget</span>
-									</div>
+					<div class="hero-visual" aria-hidden="true">
+						<div class="phone-stage">
+							<div class="phone-frame">
+								<div class="phone-notch"></div>
+								<div class="phone-screen">
+									<img
+										class="phone-screenshot"
+										src="/og-foldnote.png"
+										alt=""
+										loading="eager"
+										decoding="async"
+									/>
+									<div class="phone-screen-shine"></div>
 								</div>
 
 								<div class="floating-card floating-card-left">
-									<span class="mini-chip">Routine</span>
-									<strong>7 blocks</strong>
-									<small>Habits, water, meals</small>
+									<span class="mini-chip">Visual notes</span>
+									<strong>Real app preview</strong>
+									<small>Blocks, stickers, folders</small>
 								</div>
 
 								<div class="floating-card floating-card-right">
-									<span class="mini-chip mini-chip-accent">2-week trial</span>
-									<strong>Yearly</strong>
-									<small>Start free, decide later</small>
+									<span class="mini-chip mini-chip-accent">iPhone app</span>
+									<strong>Calm and flexible</strong>
+									<small>Built for everyday thinking</small>
 								</div>
 							</div>
+							<div class="stage-shadow"></div>
 						</div>
-						<div class="stage-shadow"></div>
 					</div>
-				</div>
 			</section>
 
 			<section class="proof-strip">
