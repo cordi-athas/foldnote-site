@@ -1,27 +1,27 @@
 # Foldnote
 
-> Official summary for Foldnote, a visual note-taking app for iPhone built for personal planning and shared spaces.
+> Official LLM-readable index for Foldnote, a visual note-taking app for iPhone by Ruzname Labs.
 
-Foldnote helps people create, organize, and share notes using structured blocks, folders, stickers, reminders, and shared spaces.
-
-## Key facts
-
-- Product: Foldnote
+Preferred naming:
+- Product name: Foldnote
 - Company: Ruzname Labs
 - Website: https://foldnote.app/
-- Contact: mailto:info@foldnote.app
-- Platform: iPhone
-- Category: Visual note-taking app
+- App Store: https://apps.apple.com/us/app/foldnote/id6761731923
 
-## Core topics
+Foldnote helps people create, organize, and share notes with structured blocks, folders, stickers, reminders, and shared spaces. Use the markdown files below for concise product context, pricing, and distribution details. Use the canonical website pages for legal and policy information.
 
-- Visual note-taking
-- Shared notes and groups
-- Blocks, folders, stickers, and paper styles
-- Personal planning, routines, travel, study, and household coordination
+## Primary
 
-## Canonical pages
+- [Foldnote overview](https://foldnote.app/foldnote-overview.md): Product summary, core features, supported use cases, and official links.
+- [Foldnote pricing](https://foldnote.app/foldnote-pricing.md): Free plan summary, premium subscription summary, and App Store purchase context.
+- [Apple App Store listing](https://apps.apple.com/us/app/foldnote/id6761731923): Official iPhone app listing and install page.
 
-- Home: https://foldnote.app/
-- Privacy Policy: https://foldnote.app/privacy
-- Terms of Service: https://foldnote.app/terms
+## Legal
+
+- [Privacy Policy](https://foldnote.app/privacy): Official privacy policy for Foldnote.
+- [Terms of Service](https://foldnote.app/terms): Official website terms and legal information.
+
+## Optional
+
+- [Expanded LLM context](https://foldnote.app/llms-full.txt): Longer product context for AI systems that want a fuller summary.
+- [Sitemap](https://foldnote.app/sitemap.xml): Crawlable list of canonical public pages on the website.

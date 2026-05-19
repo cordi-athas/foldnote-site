@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const appStoreURL = 'https://apps.apple.com/us/app/foldnote/id6761731923';
+
 const features = [
 	{
 		title: 'Structured notes, not blank pages',
@@ -44,7 +46,12 @@ const faqItems = [
 	{
 		question: 'How does pricing work?',
 		answer:
-			'Foldnote has a free plan for getting started and a yearly paid plan at $19.99 with a 2-week free trial for unlimited notes, larger groups, and more customization.'
+			'Foldnote has a free plan for getting started, a monthly premium option, and a yearly paid plan at $19.99 with a 2-week free trial for unlimited notes, larger groups, and more customization.'
+	},
+	{
+		question: 'Where can I download Foldnote?',
+		answer:
+			'Foldnote is available on the Apple App Store for iPhone. You can download it directly from the official App Store listing.'
 	}
 ];
 
@@ -66,6 +73,7 @@ const structuredData = {
 				'@id': 'https://foldnote.app/#organization',
 				name: 'Ruzname Labs',
 				url: 'https://foldnote.app/',
+				sameAs: [appStoreURL],
 				logo: {
 					'@type': 'ImageObject',
 					url: 'https://foldnote.app/logo.png'
@@ -98,10 +106,14 @@ const structuredData = {
 			'@id': 'https://foldnote.app/#app',
 			name: 'Foldnote',
 			url: 'https://foldnote.app/',
+			downloadUrl: appStoreURL,
+			installUrl: appStoreURL,
 			operatingSystem: 'iOS',
 			applicationCategory: 'ProductivityApplication',
 			description:
 				'Foldnote is a visual note-taking app for iPhone built for personal planning and shared spaces, with flexible blocks, folders, stickers, reminders, and collaboration.',
+			image: 'https://foldnote.app/og-foldnote.png',
+			screenshot: 'https://foldnote.app/og-foldnote.png',
 			offers: [
 				{
 					'@type': 'Offer',
@@ -125,6 +137,18 @@ const structuredData = {
 				'Folders, stickers, and paper styles',
 				'Search and reminders'
 			]
+		},
+		{
+			'@type': 'FAQPage',
+			'@id': 'https://foldnote.app/#faq',
+			mainEntity: faqItems.map((item) => ({
+				'@type': 'Question',
+				name: item.question,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: item.answer
+				}
+			}))
 		}
 	]
 };
@@ -132,14 +156,12 @@ const structuredData = {
 
 <Layout
 	title="Foldnote | Notes That Feel More Alive"
-	description="Foldnote is a visual note-taking app for personal planning and shared spaces, with blocks, stickers, folders, and collaboration."
+	description="Foldnote is a visual note-taking app for iPhone with blocks, folders, stickers, shared spaces, reminders, and flexible collaboration."
 	path="/"
 	image="/og-foldnote.png"
 	imageAlt="Foldnote homepage preview showing warm paper design and note-taking features"
+	structuredData={structuredData}
 >
-	<Fragment slot="head">
-		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
-	</Fragment>
 		<div class="site-shell">
 			<header class="topbar">
 				<a class="brand" href="#top" aria-label="Foldnote home">
@@ -153,10 +175,11 @@ const structuredData = {
 			<nav class="topnav" aria-label="Primary">
 				<a href="#features">Features</a>
 				<a href="#pricing">Pricing</a>
+				<a href="#faq-title">FAQ</a>
 				<a href="#contact">Contact</a>
 			</nav>
 
-			<a class="button button-ghost" href="mailto:info@foldnote.app">Get updates</a>
+			<a class="button button-ghost" href={appStoreURL} rel="noreferrer">View on App Store</a>
 		</header>
 
 		<main id="top">
@@ -171,9 +194,15 @@ const structuredData = {
 					</p>
 
 					<div class="hero-actions">
-						<a class="button button-primary" href="#pricing">See pricing</a>
+						<a class="button button-primary" href={appStoreURL} rel="noreferrer">Download on the App Store</a>
+						<a class="button button-secondary" href="#pricing">See pricing</a>
 						<a class="button button-secondary" href="#features">Explore features</a>
 					</div>
+
+					<p class="hero-store-note">
+						Available on the Apple App Store for iPhone. Review pricing, screenshots, and updates on the
+						official product page.
+					</p>
 
 					<ul class="hero-pills" aria-label="Product highlights">
 						{highlights.map((item) => <li>{item}</li>)}
@@ -231,7 +260,7 @@ const structuredData = {
 					<dl class="fact-list">
 						<div>
 							<dt>Platform</dt>
-							<dd>iPhone</dd>
+							<dd>iPhone on the App Store</dd>
 						</div>
 						<div>
 							<dt>Best for</dt>
@@ -243,7 +272,11 @@ const structuredData = {
 						</div>
 						<div>
 							<dt>Pricing</dt>
-							<dd>Free plan plus yearly option with 2-week trial</dd>
+							<dd>Free plan, monthly premium, and yearly option with 2-week trial</dd>
+						</div>
+						<div>
+							<dt>Download</dt>
+							<dd><a class="inline-link" href={appStoreURL} rel="noreferrer">Official App Store listing</a></dd>
 						</div>
 					</dl>
 				</article>
@@ -313,6 +346,7 @@ const structuredData = {
 							<li>Custom stickers and more styles</li>
 							<li>Groups up to 50 people</li>
 						</ul>
+						<a class="button button-primary price-cta" href={appStoreURL} rel="noreferrer">Get Foldnote on the App Store</a>
 					</article>
 				</div>
 			</section>
@@ -340,7 +374,8 @@ const structuredData = {
 				</div>
 
 				<div class="cta-actions">
-					<a class="button button-primary" href="mailto:info@foldnote.app?subject=Foldnote%20updates">Email Foldnote</a>
+					<a class="button button-primary" href={appStoreURL} rel="noreferrer">Open App Store</a>
+					<a class="button button-secondary" href="mailto:info@foldnote.app?subject=Foldnote%20updates">Email Foldnote</a>
 					<a class="button button-secondary" href="/privacy">Privacy</a>
 				</div>
 			</section>
@@ -353,6 +388,7 @@ const structuredData = {
 			</div>
 
 			<div class="footer-links">
+				<a href={appStoreURL} rel="noreferrer">App Store</a>
 				<a href="/privacy">Privacy</a>
 				<a href="/terms">Terms</a>
 				<a href="mailto:info@foldnote.app">info@foldnote.app</a>

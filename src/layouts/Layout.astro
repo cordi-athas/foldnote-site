@@ -8,6 +8,7 @@ interface Props {
 	image?: string;
 	imageAlt?: string;
 	noindex?: boolean;
+	structuredData?: unknown;
 }
 
 const {
@@ -16,7 +17,8 @@ const {
 	path = '/',
 	image = '/og-foldnote.png',
 	imageAlt = 'Foldnote preview card with warm paper styling and visual note-taking interface',
-	noindex = false
+	noindex = false,
+	structuredData
 } = Astro.props;
 
 const site = 'https://foldnote.app';
@@ -50,6 +52,8 @@ const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
 		<meta name="googlebot" content={robots} />
 		<meta name="application-name" content="Foldnote" />
 		<meta name="apple-mobile-web-app-title" content="Foldnote" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-itunes-app" content="app-id=6761731923" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
@@ -67,6 +71,9 @@ const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
 		<meta name="twitter:image" content={absoluteImage} />
 		<meta name="twitter:image:alt" content={imageAlt} />
 		<meta name="theme-color" content="#f7efe3" />
+		{structuredData && (
+			<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+		)}
 		{googleSiteVerification && (
 			<meta name="google-site-verification" content={googleSiteVerification} />
 		)}

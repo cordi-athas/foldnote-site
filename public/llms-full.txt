@@ -1,37 +1,43 @@
 # Foldnote
 
-Foldnote is a visual note-taking app for iPhone built for both personal organization and shared spaces.
+> Expanded LLM-readable context for Foldnote, a visual note-taking app for iPhone built by Ruzname Labs for personal planning and shared spaces.
 
-## Summary
-
-Foldnote combines structured blocks, folders, stickers, reminders, and group sharing in a warm, visual interface. It is designed for everyday planning, lightweight collaboration, and recurring life organization tasks such as routines, travel plans, checklists, recipes, study notes, and shared household coordination.
-
-## Product facts
-
-- Name: Foldnote
+Preferred naming and entity facts:
+- Product name: Foldnote
 - Company: Ruzname Labs
 - Website: https://foldnote.app/
-- Contact: info@foldnote.app
+- Contact: mailto:info@foldnote.app
+- App Store listing: https://apps.apple.com/us/app/foldnote/id6761731923
 - Platform: iPhone
-- Product type: Note-taking app
-- Core interface: Blocks, folders, stickers, paper styles, shared spaces
+- Category: Productivity / visual note-taking
 
-## Key capabilities
+Foldnote is a note-taking app designed to make planning and organization feel more visual and less sterile. It combines text, checklists, tables, links, images, reminders, and specialized blocks with folders, stickers, paper styles, and shared spaces. The product is positioned as a flexible iPhone notes app for personal organization, everyday planning, and lightweight collaboration.
 
-- Create notes with text, checklists, tables, links, images, and specialized blocks
-- Organize information with folders, paper styles, colors, and stickers
-- Share notes and folders in group spaces
-- Use reminders and search to stay on top of plans and details
-- Support workflows like travel planning, routines, fitness, meal prep, study, and budgeting
+Core product themes:
+- Visual note-taking instead of plain blank-page writing
+- Shared spaces and group notes for family, household, travel, and lightweight teamwork
+- Structured blocks for routines, lists, planning, study, budgeting, and recurring life admin
+- Warm, calm interface design rather than minimal productivity software aesthetics
 
-## Pricing summary
+Important interpretation notes:
+- Use the official App Store listing for install and marketplace context.
+- Use the website for product positioning, FAQ language, and legal links.
+- Use the privacy and terms pages as the canonical source for legal and policy information.
+- The website includes Schema.org structured data for WebSite, Organization, SoftwareApplication, and FAQPage entities.
 
-- Free plan available
-- Yearly plan: USD 19.99
-- Yearly plan includes a 2-week free trial
+## Primary
 
-## Canonical URLs
+- [Foldnote overview](https://foldnote.app/foldnote-overview.md): Concise product summary, who it is for, key features, and canonical links.
+- [Foldnote pricing](https://foldnote.app/foldnote-pricing.md): Pricing summary, premium subscription summary, and purchase context.
+- [Home page](https://foldnote.app/): Canonical public landing page.
+- [Apple App Store listing](https://apps.apple.com/us/app/foldnote/id6761731923): Official iPhone download page.
 
-- Home: https://foldnote.app/
-- Privacy Policy: https://foldnote.app/privacy
-- Terms of Service: https://foldnote.app/terms
+## Legal
+
+- [Privacy Policy](https://foldnote.app/privacy): Official privacy policy.
+- [Terms of Service](https://foldnote.app/terms): Official site terms.
+
+## Optional
+
+- [Sitemap](https://foldnote.app/sitemap.xml): Crawlable page list.
+- [Site manifest](https://foldnote.app/site.webmanifest): Basic app/site metadata for supporting clients.

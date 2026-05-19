@@ -209,6 +209,14 @@ img {
 	color: var(--ink-soft);
 }
 
+.hero-store-note {
+	margin: 18px 0 0;
+	max-width: 52ch;
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: var(--ink-faint);
+}
+
 .hero-actions {
 	display: flex;
 	flex-wrap: wrap;
@@ -452,6 +460,12 @@ img {
 	line-height: 1.45;
 }
 
+.inline-link {
+	color: var(--coral);
+	text-decoration: underline;
+	text-underline-offset: 0.18em;
+}
+
 .section-grid,
 .pricing,
 .faq-section {
@@ -624,6 +638,11 @@ img {
 	font-weight: 700;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
+}
+
+.price-cta {
+	margin-top: 22px;
+	width: 100%;
 }
 
 .faq-grid {
